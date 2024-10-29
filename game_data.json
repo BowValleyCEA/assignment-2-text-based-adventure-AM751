@@ -1,5 +1,37 @@
 {
-  "GameName": "Assignment 2",
-  "Description": "Some game description for Assignment 2",
-  "Rooms":  [{"Name":"Living Room","Reference":"living_room","Description":"Place where people live, I guess."}, {"Name":"Dining Room","Reference":"dining_room","Description":"A dining for rooms"}]
+  "GameName": "VII V I :)",
+  "Description": "My Text adventure game.",
+
+  "Rooms": [
+    {
+      "Name": "Living Room",
+      "Reference": "living_room",
+      "Description": "Place where people live, I guess.",
+      "thePath": "You enter a place where people live. There's a dining room to the west.",
+      "Straight": "dining_room"
+    },
+
+    {
+      "Name": "Dining Room",
+      "Reference": "dining_room",
+      "Description": "A dining purpose room",
+      "thePath": "You enter the dining room. The lights are dim, and the food on the table is not good to eat.",
+      "Back": "living_room"
+    },
+
+    {
+      "Name": "Store Room",
+      "Reference": "store_room",
+      "Description": "Excess storage room",
+      "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
+      "Left": "kitchen"
+    },
+
+    {
+      "Name": "Kitchen",
+      "Reference":  "kitchen",
+      "Description": "Place to cook.",
+      "thePath":  "Here in the kitchen, you can cook food with the items which you've got in the Store Room."
+    }
+  ]
 }

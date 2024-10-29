@@ -11,5 +11,8 @@ yourGameData = JsonSerializer.Deserialize<GameData>(jsonString);
 Game yourGame = new Game(yourGameData);
 while (true)
 {
+    Console.WriteLine(yourGameData.Rooms[0].thePath);
+    Console.WriteLine(yourGameData.Rooms[1].Description);
+    Console.Write("What will you do? > ");
     yourGame.ProcessString(Console.ReadLine());
 }

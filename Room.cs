@@ -12,5 +12,10 @@ namespace game1402_a2_starter
         public string Name { get; set; }
         public string Reference { get; set; }
         public string Description { get; set; }
+        public string thePath { get; set; }
+        public string Straight { get; set; }
+        public string Back { get; set; }
+        public string Left { get; set; }
+        public string Right { get; set; }
     }
 }

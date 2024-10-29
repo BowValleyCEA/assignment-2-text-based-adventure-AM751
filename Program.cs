@@ -12,7 +12,11 @@ Game yourGame = new Game(yourGameData);
 while (true)
 {
     Console.WriteLine(yourGameData.Rooms[0].thePath);
-    Console.WriteLine(yourGameData.Rooms[1].Description);
+   
     Console.Write("What will you do? > ");
+    Console.WriteLine(yourGameData.Rooms[0].thePath + "\n");
+    Console.WriteLine(yourGameData.Rooms[1].thePath + "\n");
+    Console.WriteLine(yourGameData.Rooms[2].thePath + "\n");
     yourGame.ProcessString(Console.ReadLine());
+    return 0;
 }

@@ -29,9 +29,18 @@
 
     {
       "Name": "Kitchen",
-      "Reference":  "kitchen",
+      "Reference": "kitchen",
       "Description": "Place to cook.",
-      "thePath":  "Here in the kitchen, you can cook food with the items which you've got in the Store Room."
+      "thePath": "Here in the kitchen, you can cook food with the items which you've got in the Store Room.",
+      "Right":"exit"
+    },
+
+    {
+      "Name": "Exit",
+      "Reference": "exit",
+      "Description": "Exit the home.",
+      "thePath": "By going out of the home, you can see your Garage and locate the Car. By going towards the South, you can able to find a pathway to Escape.",
+      "South": "".
     }
   ]
 }

@@ -38,18 +38,18 @@ namespace game1402_a2_starter
                     return;
                 }
 
-                switch (commands[1])
-                {
-                    case "Straight":
-                       // _currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == commands[1]; });
-                        break;
-                    case "Back":
-                        break;
-                    case "Left":
-                        break;
-                    case "Right":
-                        break;
-                }
+                //switch (commands[1])
+                //{
+                //    case "Straight":
+                //       // _currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == commands[1]; });
+                //        break;
+                //    case "Back":
+                //        break;
+                //    case "Left":
+                //        break;
+                //    case "Right":
+                //        break;
+                //}
             }
 
             else if (commands[0] == "i" && commands[1] == "will" && commands[2] == "sleep")
@@ -57,7 +57,7 @@ namespace game1402_a2_starter
                 Console.WriteLine("good night!");
             }
 
-            else if (commands[0] == "i" && commands[1] == "know" && commands[20] == "nothing")
+            else if (commands[0] == "i" && commands[1] == "know" && commands[2] == "nothing")
             {
                 Console.WriteLine("i'll guide you");
             }

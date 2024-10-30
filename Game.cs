@@ -18,6 +18,15 @@ namespace game1402_a2_starter
     {
         private GameData _gameData = data;
         private Room _currentRoom = data.Rooms[0];
+        //public bool IsDone;
+
+        public Room CurrentRoom
+        {
+            get
+            {
+                return _currentRoom;
+            }
+        }
 
         public void ProcessString(string enteredString)
         {
@@ -38,18 +47,172 @@ namespace game1402_a2_starter
                     return;
                 }
 
-                //switch (commands[1])
-                //{
-                //    case "Straight":
-                //       // _currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == commands[1]; });
-                //        break;
-                //    case "Back":
-                //        break;
-                //    case "Left":
-                //        break;
-                //    case "Right":
-                //        break;
-                //}
+                string? roomToGoTo = null;
+
+                switch (commands[1].ToLower())
+                {
+                    default:
+                        Console.WriteLine($"{commands[1]} is not a place you can go to.");
+                        break;
+                    case "straight":
+                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Straight)
+                            {
+                                roomToGoTo = _currentRoom.Straight;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                    case "back":
+                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Back)
+                            {
+                                roomToGoTo = _currentRoom.Back;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                    case "left":
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Left)
+                            {
+                                roomToGoTo = _currentRoom.Back;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                    case "right":
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Right)
+                            {
+                                roomToGoTo = _currentRoom.Right;
+                            }
+                        }
+                        
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                }
+            }
+            //2:
+            if (commands[0] == "go")
+            {
+                if (commands.Length < 2)
+                {
+                    Console.WriteLine("Where should I go?");
+                    return;
+                }
+
+                string? roomToGoTo = null;
+
+                switch (commands[1].ToLower())
+                {
+                    default:
+                        Console.WriteLine($"{commands[1]} is not a place you can go to.");
+                        break;
+                    case "straight":
+                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Straight)
+                            {
+                                roomToGoTo = _currentRoom.Straight;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                    case "back":
+                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Back)
+                            {
+                                roomToGoTo = _currentRoom.Back;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                    case "left":
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Left)
+                            {
+                                roomToGoTo = _currentRoom.Back;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                    case "right":
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Right)
+                            {
+                                roomToGoTo = _currentRoom.Right;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+                }
             }
 
             else if (commands[0] == "i" && commands[1] == "will" && commands[2] == "sleep")
@@ -60,6 +223,10 @@ namespace game1402_a2_starter
             else if (commands[0] == "i" && commands[1] == "know" && commands[2] == "nothing")
             {
                 Console.WriteLine("i'll guide you");
+            }
+            else
+            {
+                Console.WriteLine("I didn't understand you.");
             }
             
             //string

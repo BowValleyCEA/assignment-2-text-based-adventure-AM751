@@ -2,7 +2,8 @@
 using System.Text.Json;
 using game1402_a2_starter;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Welcome to VII V I :).\n");
+Console.Write("Maahin's Text Adventure Game.\n\n");
 string fileName = "../../../game_data.json";//if you are ever worried about whether your json is valid or not, check out JSON Lint: 
 
 GameData yourGameData;
@@ -11,12 +12,13 @@ yourGameData = JsonSerializer.Deserialize<GameData>(jsonString);
 Game yourGame = new Game(yourGameData);
 while (true)
 {
-    Console.WriteLine(yourGameData.Rooms[0].thePath);
+    Console.WriteLine(yourGame.CurrentRoom.thePath);
    
     Console.Write("What will you do? > ");
-    Console.WriteLine(yourGameData.Rooms[0].thePath + "\n");
-    Console.WriteLine(yourGameData.Rooms[1].thePath + "\n");
-    Console.WriteLine(yourGameData.Rooms[2].thePath + "\n");
     yourGame.ProcessString(Console.ReadLine());
-    return 0;
+
+    //if (yourGame.IsDone)
+    //{
+    //    return;
+    //}
 }

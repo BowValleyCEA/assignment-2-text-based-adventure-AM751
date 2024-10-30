@@ -6,8 +6,8 @@
     {
       "Name": "Living Room",
       "Reference": "living_room",
-      "Description": "Place where people live, I guess.",
-      "thePath": "You enter a place where people live. There's a dining room to the west.",
+      "Description": "A space where people use it for their personal activities.",
+      "thePath": "You enter a place where people live. There's a dining room if you go backwards from here.",
       "Straight": "dining_room"
     },
 
@@ -40,7 +40,7 @@
       "Reference": "exit",
       "Description": "Exit the home.",
       "thePath": "By going out of the home, you can see your Garage and locate the Car. By going towards the South, you can able to find a pathway to Escape.",
-      "South": "".
+      "South": ""
     }
   ]
 }

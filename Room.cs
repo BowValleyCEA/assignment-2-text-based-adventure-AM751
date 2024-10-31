@@ -17,5 +17,7 @@ namespace game1402_a2_starter
         public string Back { get; set; }
         public string Left { get; set; }
         public string Right { get; set; }
+
+    
     }
 }

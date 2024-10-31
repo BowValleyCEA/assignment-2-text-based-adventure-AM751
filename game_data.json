@@ -7,7 +7,7 @@
       "Name": "Living Room",
       "Reference": "living_room",
       "Description": "A space where people use it for their personal activities.",
-      "thePath": "You enter a place where people live. There's a dining room if you go backwards from here.",
+      "thePath": "You enter a place where people live and you have to escape from here. There's a dining room if you go backwards from here, its just a hint.",
       "Straight": "dining_room"
     },
 

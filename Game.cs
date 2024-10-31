@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -39,6 +40,7 @@ namespace game1402_a2_starter
                     .Split(" "); //split based on spaces. The length of this array will tell you whether you have 1, 2, 3, 4, or more commands.
                                  //modify these functions however you want, but this is where the beginning of calling functions to handle where you are
 
+            
 
             if (commands[0] == "go")
             {
@@ -52,10 +54,10 @@ namespace game1402_a2_starter
 
                 switch (commands[1].ToLower())
                 {
-                    default:
+                        default:
                         Console.WriteLine($"{commands[1]} is not a place you can go to.");
                         break;
-                    case "straight":
+                        case "straight":
                         //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
                         foreach (var room in _gameData.Rooms)
                         {
@@ -72,8 +74,10 @@ namespace game1402_a2_starter
                                 _currentRoom = room;
                             }
                         }
+
                         break;
-                    case "back":
+
+                        case "back":
                         //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
                         foreach (var room in _gameData.Rooms)
                         {
@@ -91,7 +95,7 @@ namespace game1402_a2_starter
                             }
                         }
                         break;
-                    case "left":
+                        case "left":
                         foreach (var room in _gameData.Rooms)
                         {
                             if (room.Reference == _currentRoom.Left)
@@ -108,7 +112,8 @@ namespace game1402_a2_starter
                             }
                         }
                         break;
-                    case "right":
+
+                        case "right":
                         foreach (var room in _gameData.Rooms)
                         {
                             if (room.Reference == _currentRoom.Right)
@@ -127,187 +132,7 @@ namespace game1402_a2_starter
                         break;
                 }
             }
-            //2:
-            else if (commands[0] == "eat")
-            {
-                if (commands.Length < 2)
-                {
-                    Console.WriteLine("Is that a food?");
-                    return;
-                }
-
-                string? roomToGoTo = null;
-
-                switch (commands[1].ToLower())
-                {
-                    default:
-                        Console.WriteLine($"{commands[2]} is not a place you can go to.");
-                        break;
-                    case "straight":
-                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Straight)
-                            {
-                                roomToGoTo = _currentRoom.Straight;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                    case "back":
-                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Back)
-                            {
-                                roomToGoTo = _currentRoom.Back;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                    case "left":
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Left)
-                            {
-                                roomToGoTo = _currentRoom.Back;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                    case "right":
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Right)
-                            {
-                                roomToGoTo = _currentRoom.Right;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-
-                }
-            }
-            //3:
-            else if (commands[0] == "cook")
-            {
-                if (commands.Length < 2)
-                {
-                    Console.WriteLine("some meat and vegetables.");
-                    return;
-                }
-
-                string? roomToGoTo = null;
-
-                switch (commands[1].ToLower())
-                {
-                    default:
-                        Console.WriteLine($"{commands[2]} is not a place you can go to.");
-                        break;
-                    case "straight":
-                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Straight)
-                            {
-                                roomToGoTo = _currentRoom.Straight;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                    case "back":
-                        //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Back)
-                            {
-                                roomToGoTo = _currentRoom.Back;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                    case "left":
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Left)
-                            {
-                                roomToGoTo = _currentRoom.Back;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                    case "right":
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == _currentRoom.Right)
-                            {
-                                roomToGoTo = _currentRoom.Right;
-                            }
-                        }
-
-                        foreach (var room in _gameData.Rooms)
-                        {
-                            if (room.Reference == roomToGoTo)
-                            {
-                                _currentRoom = room;
-                            }
-                        }
-                        break;
-                        
-                         
-
-                }
-
-            }
+            
             else if (commands[0] == "i" && commands[1] == "should" && commands[2] == "escape") //1.
             {
                 Console.WriteLine("you need to find a lead to find a way out of the house but, beofre that you need some food intake since you are starving.\n");
@@ -323,15 +148,26 @@ namespace game1402_a2_starter
                 Console.WriteLine("You might cook a delicious meal with this.\n");
             }
 
-            else if (commands[0] == "i" && commands[1] == "know" && commands[2] == "nothing")
+            else if (commands[0] == "help")// If none of the inputs of the players dosent match with any "before if else's", then this comment will be given as Output.
             {
-                Console.WriteLine("i'll help you.\n");
+                Console.WriteLine("\ni'll help you.\n");
+                Console.WriteLine("If you enter into any room which shows on the screen, you can move in any directions to get to the other rooms.\n" +
+                    "The main objective is, You have to escape from the kidnappers who kidnapped you and that can be done by taking a look of all the rooms.\n" +
+                    "Hint: If you find a way out of the house, then you are one step closer to complete the OBJECTIVE.");
             }
-            else
+
+            else if (commands[0] == "i quit")
             {
-                Console.WriteLine("I didn't understand you.\n");
-               
+                return;
             }
+
+            else //if none of the inputs match with any of the above mentioned "else if's", then this will be printed as Output.
+            {
+                Console.WriteLine("I dont understand.\n");
+
+            }
+
+            
 
             //string
             //response =

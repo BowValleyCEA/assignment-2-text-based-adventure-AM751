@@ -2,6 +2,7 @@
 using System.ComponentModel.Design;
 using System.Net.Quic;
 using System.Text.Json;
+using System.Windows.Input;
 using game1402_a2_starter;
 
 Console.WriteLine("Welcome to VII V I :).\n");
@@ -18,12 +19,17 @@ while (true)
     Console.WriteLine("Press ENTER key to proceed further:\n");
     Console.ReadLine();
 
+    Console.WriteLine("\nAny Assistance?..");
+    Console.WriteLine("\nIf you are clueless, type 'help' and tap the ENTER key for a short description on how you can Proceed further.\n" +
+        "After the first description of the current room do type 'help' if you are clueless.");
+    Console.ReadLine();
 
     Console.WriteLine(yourGame.CurrentRoom.thePath);
     Console.Write("\nWhat will you do?");
 
     yourGame.ProcessString(Console.ReadLine());
 
+    
     
 
 

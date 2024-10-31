@@ -7,7 +7,7 @@
       "Name": "Living Room",
       "Reference": "living_room",
       "Description": "A space where people use it for their personal activities.",
-      "thePath": "You enter a place where people live and you have to escape from here. There's a dining room if you go backwards from here, its just a hint.",
+      "thePath": "You have been kidnapped and kept in a room. You have to escape from here and there's a dining room if you go Straight.",
       "Straight": "dining_room"
     },
 
@@ -24,23 +24,22 @@
       "Reference": "store_room",
       "Description": "Excess storage room",
       "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
-      "Left": "kitchen"
+      "Left": "kitchen_space"
     },
 
     {
       "Name": "Kitchen",
-      "Reference": "kitchen",
+      "Reference": "kitchen_space",
       "Description": "Place to cook.",
       "thePath": "Here in the kitchen, you can cook food with the items which you've got in the Store Room.",
-      "Right":"exit"
+      "Right": "store_room"
     },
 
     {
       "Name": "Exit",
       "Reference": "exit",
       "Description": "Exit the home.",
-      "thePath": "By going out of the home, you can see your Garage and locate the Car. By going towards the South, you can able to find a pathway to Escape.",
-      "South": ""
+      "thePath": "By going out of the home, you can see a Garage and locate the KEY to unlock the door.By opening the gate, you can able to find a pathway to Escape."
     }
   ]
 }

@@ -31,6 +31,7 @@ namespace game1402_a2_starter
 
         public void ProcessString(string enteredString)
         {
+            Console.Clear();
             enteredString =
                 enteredString.Trim()
                     .ToLower(); //trim any white space from the beginning or end of string and convert to lower case

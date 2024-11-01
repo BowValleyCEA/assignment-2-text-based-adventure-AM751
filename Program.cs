@@ -5,8 +5,10 @@ using System.Text.Json;
 using System.Windows.Input;
 using game1402_a2_starter;
 
-Console.WriteLine("Welcome to VII V I :).\n");
-Console.Write("Maahin's Text Adventure Game.\n\n");
+Console.WriteLine(" Welcome to VII V I :).\n");
+Console.Write(" Ahamed's Text Adventure Game.\n");
+Console.WriteLine(" Maahin got kidnapped and kept in a Room with bare amount of light source.\n Help him to find a way all out of an unknown house and accomplish the OBJECTIVE.\n");
+Console.WriteLine(" You have to go through Certain areas like a Room, Kitchen, Store Room and finally breaking out a gate on the exit.\n\n");
 string fileName = "../../../game_data.json";//if you are ever worried about whether your json is valid or not, check out JSON Lint: 
 
 
@@ -16,7 +18,7 @@ yourGameData = JsonSerializer.Deserialize<GameData>(jsonString);
 Game yourGame = new Game(yourGameData);
 while (true)
 {
-    Console.WriteLine("Press ENTER key to proceed further:\n");
+    Console.WriteLine(" Press ENTER key to proceed further:\n");
     Console.ReadLine();
 
     Console.WriteLine("\nAny Assistance?..");

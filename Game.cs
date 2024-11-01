@@ -100,7 +100,7 @@ namespace game1402_a2_starter
                         {
                             if (room.Reference == _currentRoom.Left)
                             {
-                                roomToGoTo = _currentRoom.Back;
+                                roomToGoTo = _currentRoom.Left  ;
                             }
                         }
 
@@ -135,7 +135,7 @@ namespace game1402_a2_starter
             
             else if (commands[0] == "i" && commands[1] == "should" && commands[2] == "escape") //1.
             {
-                Console.WriteLine("you need to find a lead to find a way out of the house but, beofre that you need some food intake since you are starving.\n");
+                Console.WriteLine("you need to find a way out of the house but, before that, you need food intake since you are starving.\n");
             }
 
             else if (commands[0] == "i" && commands[1] == "will" && commands[2] == "cook") //2.
@@ -148,7 +148,7 @@ namespace game1402_a2_starter
                 Console.WriteLine("You might cook a delicious meal with this.\n");
             }
 
-            else if (commands[0] == "help")// If none of the inputs of the players dosent match with any "before if else's", then this comment will be given as Output.
+            else if (commands[0] == "help")// If none of the inputs of the players dosent match with any before "if else's", then this comment will be given as Output.
             {
                 Console.WriteLine("\ni'll help you.\n");
                 Console.WriteLine("If you enter into any room which shows on the screen, you can move in any directions to get to the other rooms.\n" +
@@ -156,8 +156,9 @@ namespace game1402_a2_starter
                     "Hint: If you find a way out of the house, then you are one step closer to complete the OBJECTIVE.");
             }
 
-            else if (commands[0] == "i quit")
+            else if (commands[0] == "quit")
             {
+                Console.WriteLine("it seems that you want to quit the Objective.");
                 return;
             }
 

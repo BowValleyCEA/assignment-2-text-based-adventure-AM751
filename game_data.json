@@ -7,7 +7,7 @@
       "Name": "Living Room",
       "Reference": "living_room",
       "Description": "A space where people use it for their personal activities.",
-      "thePath": "You have been kidnapped and kept in a room. You have to escape from here and there's a dining room if you go Straight.",
+      "thePath": "You have been kidnapped and kept in a room. You have to escape from here and there's a dining room if you head towards North.",
       "North": "dining_room"
     },
 
@@ -26,6 +26,7 @@
       "Description": "Excess storage room",
       "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
       "East": "kitchen_space"
+      
     },
 
     {
@@ -33,7 +34,7 @@
       "Reference": "kitchen_space",
       "Description": "Place to cook.",
       "thePath": "Here in the kitchen, you can cook food with the items which you've got in the Store Room.",
-      "East": "store_room"
+      "NorthEast": "exit"
     },
 
     {

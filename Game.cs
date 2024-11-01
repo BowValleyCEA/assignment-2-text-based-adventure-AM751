@@ -58,13 +58,13 @@ namespace game1402_a2_starter
                         default:
                         Console.WriteLine($"{commands[1]} is not a place you can go to.");
                         break;
-                        case "straight":
+                        case "north":
                         //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
                         foreach (var room in _gameData.Rooms)
                         {
-                            if (room.Reference == _currentRoom.Straight)
+                            if (room.Reference == _currentRoom.North)
                             {
-                                roomToGoTo = _currentRoom.Straight;
+                                roomToGoTo = _currentRoom.North;
                             }
                         }
 
@@ -78,13 +78,13 @@ namespace game1402_a2_starter
 
                         break;
 
-                        case "back":
+                        case "south":
                         //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
                         foreach (var room in _gameData.Rooms)
                         {
-                            if (room.Reference == _currentRoom.Back)
+                            if (room.Reference == _currentRoom.South)
                             {
-                                roomToGoTo = _currentRoom.Back;
+                                roomToGoTo = _currentRoom.South;
                             }
                         }
 
@@ -96,12 +96,12 @@ namespace game1402_a2_starter
                             }
                         }
                         break;
-                        case "left":
+                        case "west":
                         foreach (var room in _gameData.Rooms)
                         {
-                            if (room.Reference == _currentRoom.Left)
+                            if (room.Reference == _currentRoom.West)
                             {
-                                roomToGoTo = _currentRoom.Left  ;
+                                roomToGoTo = _currentRoom.West;
                             }
                         }
 
@@ -114,12 +114,30 @@ namespace game1402_a2_starter
                         }
                         break;
 
-                        case "right":
+                        case "east":
                         foreach (var room in _gameData.Rooms)
                         {
-                            if (room.Reference == _currentRoom.Right)
+                            if (room.Reference == _currentRoom.East)
                             {
-                                roomToGoTo = _currentRoom.Right;
+                                roomToGoTo = _currentRoom.East;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        break;
+
+                    case "northeast":
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.NorthEast)
+                            {
+                                roomToGoTo = _currentRoom.NorthEast;
                             }
                         }
 

@@ -24,17 +24,23 @@ Console.WriteLine("\nAny Assistance?..");
 Console.WriteLine("\nIf you are clueless, type 'help' and tap the ENTER key for a short description on how you can Proceed further.\n" +
     "After the first description of the current room do type 'help' if you are clueless.");
 Console.ReadLine();
+
 while (true)
 {
-    
+    Console.WriteLine("\nAny Assistance?..");
+    Console.WriteLine("\nIf you are clueless, type 'help' and tap the ENTER key for a short description on how you can Proceed further.\n" +
+                        "After the first description of the current room do type 'help' if you are clueless.\nIf you are on the Living Room, you have to head towards the Dining Room\n" +
+                        "If you are on the Dining Room, you have to find a way yourself to the next room to get something which will help you to get out of your starving.\n" +
+                        "Once if you have something to eat by cooking something for yourself means, then you are ready for the next task.\n");
+    Console.ReadLine();
+
 
     Console.WriteLine(yourGame.CurrentRoom.thePath);
     Console.Write("\nWhat will you do?");
 
     yourGame.ProcessString(Console.ReadLine());
 
-    
-    
-
 
 }
+return;
+

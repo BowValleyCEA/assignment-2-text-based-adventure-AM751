@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -178,7 +179,6 @@ namespace game1402_a2_starter
             else if (commands[0] == "quit")
             {
                 Console.WriteLine("it seems that you want to quit the Objective.");
-                return;
             }
 
             else //if none of the inputs match with any of the above mentioned "else if's", then this will be printed as Output.
@@ -186,7 +186,7 @@ namespace game1402_a2_starter
                 Console.WriteLine("I dont understand.\n");
 
             }
-
+            
             
 
             //string
@@ -194,7 +194,7 @@ namespace game1402_a2_starter
             //"Default response"; //you will always do something when processing the string and then give a response
             //Console.WriteLine(response); //what you tell the person after what they entered has been processed
         }
-
+        
     }
-
+    
 }

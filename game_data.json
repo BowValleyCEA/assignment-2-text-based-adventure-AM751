@@ -17,7 +17,7 @@
       "Description": "A dining purpose room",
       "thePath": "You enter the dining room. The lights are dim, and the food on the table is not good to eat.",
       "South": "living_room",
-      "West":  "store_room"
+      "West": "store_room"
     },
 
     {
@@ -26,7 +26,7 @@
       "Description": "Excess storage room",
       "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
       "East": "kitchen_space"
-      
+
     },
 
     {
@@ -43,5 +43,7 @@
       "Description": "Exit the home.",
       "thePath": "By going out of the home, you can see a Garage and locate the KEY to unlock the door.By opening the gate, you can able to find a pathway to Escape."
     }
+    
   ]
+  
 }

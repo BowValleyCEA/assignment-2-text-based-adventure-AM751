@@ -1,6 +1,6 @@
 {
   "GameName": "VII V I :)",
-  "Description": "My Text adventure game.",
+  "Description": "Ahamed Maahin's Text adventure game.",
 
   "Rooms": [
     {
@@ -15,7 +15,7 @@
       "Name": "Dining Room",
       "Reference": "dining_room",
       "Description": "A dining purpose room",
-      "thePath": "You enter the dining room. The lights are dim, and the food on the table is not good to eat.",
+      "thePath": "You enter the dining room. The lights are dim, and the food on the table is not good to eat. You might get something useful from the Store Room which is on the direction towards West.",
       "South": "living_room",
       "West": "store_room"
     },
@@ -25,7 +25,8 @@
       "Reference": "store_room",
       "Description": "Excess storage room",
       "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
-      "East": "kitchen_space"
+      "East": "kitchen_space",
+      "West": "store_room"
 
     },
 
@@ -41,9 +42,11 @@
       "Name": "Exit",
       "Reference": "exit",
       "Description": "Exit the home.",
-      "thePath": "By going out of the home, you can see a Garage and locate the KEY to unlock the door.By opening the gate, you can able to find a pathway to Escape."
+      "thePath": "By going out of the home, you can see a Garage and locate the KEY to unlock the door.By opening the gate, you can able to find a pathway to Escape.",
+      "Gate": "The Finish.",
+      "IsExit": true
     }
     
   ]
-  
-}
+
+} 

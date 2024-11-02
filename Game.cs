@@ -59,6 +59,7 @@ namespace game1402_a2_starter
                         default:
                         Console.WriteLine($"{commands[1]} is not a place you can go to.");
                         break;
+
                         case "north":
                         //_currentRoom = _gameData.Rooms.Find((Room room) => { return room.Reference == _currentRoom.Straight; });
                         foreach (var room in _gameData.Rooms)
@@ -76,7 +77,7 @@ namespace game1402_a2_starter
                                 _currentRoom = room;
                             }
                         }
-
+                        
                         break;
 
                         case "south":
@@ -150,14 +151,36 @@ namespace game1402_a2_starter
                             }
                         }
                         break;
+
+                    case "gate":
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == _currentRoom.Gate)
+                            {
+                                roomToGoTo = _currentRoom.Gate;
+                            }
+                        }
+
+                        foreach (var room in _gameData.Rooms)
+                        {
+                            if (room.Reference == roomToGoTo)
+                            {
+                                _currentRoom = room;
+                            }
+                        }
+                        
+                        break;
+
                 }
+
+                
             }
-            
+
+
             else if (commands[0] == "i" && commands[1] == "should" && commands[2] == "escape") //1.
             {
                 Console.WriteLine("you need to find a way out of the house but, before that, you need food intake since you are starving.\n");
             }
-
             else if (commands[0] == "i" && commands[1] == "will" && commands[2] == "cook") //2.
             {
                 Console.WriteLine("You might get useful things from store room\n");
@@ -180,21 +203,21 @@ namespace game1402_a2_starter
             {
                 Console.WriteLine("it seems that you want to quit the Objective.");
             }
-
+           
             else //if none of the inputs match with any of the above mentioned "else if's", then this will be printed as Output.
             {
                 Console.WriteLine("I dont understand.\n");
 
             }
-            
-            
+
+
+
 
             //string
             //response =
             //"Default response"; //you will always do something when processing the string and then give a response
             //Console.WriteLine(response); //what you tell the person after what they entered has been processed
         }
-        
     }
-    
+         
 }

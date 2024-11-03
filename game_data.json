@@ -15,7 +15,7 @@
       "Name": "Dining Room",
       "Reference": "dining_room",
       "Description": "A dining purpose room",
-      "thePath": "You enter the dining room. The lights are dim, and the food on the table is not good to eat. You might get something useful from the Store Room which is on the direction towards West.",
+      "thePath": "You enter the dining room. The lights are dim, and the food on the table is not good to eat. You might get something useful from the Store Room which is not on the direction towards East.",
       "South": "living_room",
       "West": "store_room"
     },
@@ -24,7 +24,7 @@
       "Name": "Store Room",
       "Reference": "store_room",
       "Description": "Excess storage room",
-      "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
+      "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself. Try to guess the direction you have to proceed further.",
       "East": "kitchen_space"
       
 
@@ -34,7 +34,7 @@
       "Name": "Kitchen",
       "Reference": "kitchen_space",
       "Description": "Place to cook.",
-      "thePath": "Here in the kitchen, you can cook food with the items which you've got in the Store Room.",
+      "thePath": "Here in the kitchen, you can cook food with the items which you've got in the Store Room... Now you might gained some Energy so, you can get an idea if you go through Northern part of the East.",
       "NorthEast": "exit"
     },
 

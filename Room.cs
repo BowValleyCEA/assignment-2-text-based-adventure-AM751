@@ -16,12 +16,12 @@ namespace game1402_a2_starter
         public string Reference { get; set; }
         public string Description { get; set; }
         public string thePath { get; set; }
-        public string North { get; set; }
-        public string South { get; set; }
-        public string East   { get; set; }
-        public string West { get; set; }
-        public string NorthEast { get; set; }
-        public string Gate { get; set; }
+        public string North { get; set; }// Direction to the Dining Room.
+        public string South { get; set; }// Direction to the Living Room.
+        public string East   { get; set; }// Direction to the Kitchen.
+        public string West { get; set; }// Direction to the Store room.
+        public string NorthEast { get; set; }// the Exit.
+        public string Gate { get; set; }//the final part of the game.
         public bool IsExit { get; set; }//for the game end process.
 
       

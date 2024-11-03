@@ -25,8 +25,8 @@
       "Reference": "store_room",
       "Description": "Excess storage room",
       "thePath": "You've entered the Store room and you can find some stuffs to craft a meal for yourself.",
-      "East": "kitchen_space",
-      "West": "store_room"
+      "East": "kitchen_space"
+      
 
     },
 
@@ -42,10 +42,11 @@
       "Name": "Exit",
       "Reference": "exit",
       "Description": "Exit the home.",
-      "thePath": "By going out of the home, you can see a Garage and locate the KEY to unlock the door.By opening the gate, you can able to find a pathway to Escape.",
+      "thePath": "By going out of the home, you can see a Gate. By opening the gate, you can run away from the danger zone.",
       "Gate": "The Finish.",
       "IsExit": true
     }
+
     
   ]
 
